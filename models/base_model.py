@@ -17,8 +17,8 @@ class BaseModel:
         """
         tform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
-        self.created_at = date.today()
-        self.updated_at = date.today()
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
         if len(kwargs) != 0:
             for k, v in kwargs.item():
                 if k == "created_at" or k == "updated_at":
